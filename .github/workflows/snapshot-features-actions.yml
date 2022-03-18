@@ -1,0 +1,16 @@
+name: Genarete Snapshot Feature
+
+on: {push}
+
+jobs:
+  Build-Dockerfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ckekout source code
+        uses: actions/ckecout@v2
+
+      - name: Install JQ to parse JSON
+        run: sudo apt-get install -y jq
+
+      - name: Build-Docker Image usin Dockerfile
+        run: docker build -t bootcamp:3.0.0 .
