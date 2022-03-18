@@ -1,0 +1,8 @@
+name: Genarete Snapshot Feature
+
+jobs:
+  Build-Dockerfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ckekout source code
+        uses: actions/ckecout@v2
